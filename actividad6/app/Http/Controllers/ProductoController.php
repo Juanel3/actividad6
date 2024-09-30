@@ -7,59 +7,21 @@ use Illuminate\Http\Request;
 
 class ProductoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    // Método para mostrar el índice de productos
     public function index()
     {
-        //
+        return view('productos.indexblade');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    // Método para mostrar la vista de creación de producto
     public function create()
     {
-        //
+        return view('productos.createblade');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    // Método para mostrar la vista de edición de producto (aunque no se utilizará)
+    public function edit($id)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Producto $producto)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Producto $producto)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Producto $producto)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Producto $producto)
-    {
-        //
+        return view('productos.editblade');
     }
 }
